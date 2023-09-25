@@ -1,46 +1,115 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
-  <head>
-    <title> Miłosz Proć </title>
-	<meta name="desription" content="Prociu"/>
-	<meta name="keywords" content="Prociu"/>
-	<meta name="title" content="szkoła w Zwierzyncu"/>
-	<meta http-equiv="Content-language" content="pl"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-  </head>
-  <body style="background-color: powderblue;">
-    <div>
-        <header>
-            <img src="https://th.bing.com/th/id/R.4f6ec049497af45382ef60a1f10a9231?rik=bJwSQoaEVh9DDw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwc1765155.jpg&ehk=Q0A%2fwFfLRpXYRFMjMtAoviuu9e6JG4NncU%2bo9iC10uc%3d&risl=&pid=ImgRaw&r=0"
-            height="225px" width="100%">
-        </header>
-        
-        <center>
-        <nav>
-            <p><a style="text-decoration: none;" href="https://www.realmadrid.com/en">najlepsza dużyna</a></p>
-        </nav>
-    </center>
-        <section>
-            <h2>znacznik section1</h2>
-            <article>
-                <h3>nagłowek article1</h3>
-                <p>zncznik article1</p>
-            </article>
-        </section>
-        <section>
-            
-            <h2>znacznik section2</h2>
-            <article>
-                <h3>nagłowek article</h3>
-            <p>znacznik article</p>
-        </article>
-        </section>
-      
-        <footer>
-          
-            Miłosz Proć©
-        </footer>
-    </div>
-</body>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega strona</title>
+    <style>
+        body {
+            background-color:rgb(75, 75, 75) ;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #0400ff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #0004ff;
+            color: white;
+        }
+
+        footer {
+            background-color: #0004ff;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/R.e21d3e044abc3ca37957186553988cab?rik=9Q7VygWb2KQXHw&pid=ImgRaw&r=0" style="width: 10vh; height: 10vh; float: topleft;">
+        <h1>Miłosz Proć FP</h1>
+        <p>Miłosz Proć</p>
+    </header>
+
+    <nav>
+        <a href="http://zsdios.pl/">Moja Szkoła</a>
+        <a href="https://www.realmadrid.com/">Mój ulubiony klub</a>
+        <a href="https://www.cristianoronaldo.com/#cr7">Najlepszy piłkarz</a>
+    </nav>
+
+    <section>
+        <h2>Moje ulubione kluby z danej ligi</h2>
+        <table>
+            <tr>
+                <th>Liga Hiszpańska</th>
+                <th>Liga Niemiecka</th>
+                <th>Liga Anglieska </th>
+            </tr>
+            <tr>
+                <td><a style="text-decoration: none;" href="//www.realmadrid.com/">Real Madryt</a></td>
+                <td>Borussia Dortmund</td>
+                <td>Man UTD</td>
+            </tr>
+            <tr>
+              <td>Valencia</td>
+              <td>RB Lipsk</td>
+              <td>Liverpool</td>
+          </tr>
+          <tr>
+              <td>Getafe</td>
+              <td>Bayern Monachium</td>
+              <td>Chealse</td>
+          </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>Miłosz Proć</p>
+        <p> Fanpage Miłosz Proć &copy;</p>
+        <p> <span id="currentDate"></span></p>
+    </footer>
+
+    <script>
+        const currentDateElement = document.getElementById("currentDate");
+        const currentDate = new Date();
+        currentDateElement.textContent = currentDate.toLocaleDateString();
+    </script>
+</body>
 </html>
+
