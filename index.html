@@ -65,6 +65,12 @@
         <img src="https://th.bing.com/th/id/R.e21d3e044abc3ca37957186553988cab?rik=9Q7VygWb2KQXHw&pid=ImgRaw&r=0" style="width: 10vh; height: 10vh; float: topleft;">
         <h1>Miłosz Proć FP</h1>
         <p>Miłosz Proć</p>
+        <p> <span id="currentDate"></span></p>
+        <script>
+            const currentDateElement = document.getElementById("currentDate");
+            const currentDate = new Date();
+            currentDateElement.textContent = currentDate.toLocaleDateString();
+        </script>
     </header>
 
     <nav>
@@ -102,14 +108,10 @@
     <footer>
         <p>Miłosz Proć</p>
         <p> Fanpage Miłosz Proć &copy;</p>
-        <p> <span id="currentDate"></span></p>
+     
     </footer>
 
-    <script>
-        const currentDateElement = document.getElementById("currentDate");
-        const currentDate = new Date();
-        currentDateElement.textContent = currentDate.toLocaleDateString();
-    </script>
+  
 </body>
 </html>
 
