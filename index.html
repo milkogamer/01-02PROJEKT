@@ -1,116 +1,81 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mega strona</title>
+    <title>Mega strona Miłosza</title>
     <style>
         body {
-            background-color:rgb(255, 255, 255) ;
             font-family: Arial, sans-serif;
+            background-color: rgb(138, 138, 138);
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background-color: #0400ff;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        nav {
-            background-color: #7e7e7e;
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            margin: 10px;
-        }
-
-        section {
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 20px;
         }
 
         table {
-            width: 100%;
             border-collapse: collapse;
+            width: 100%;
             margin-top: 20px;
         }
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #0004ff;
-            color: white;
-        }
-
-        footer {
-            background-color: #0004ff;
-            color: rgb(255, 255, 255);
+        td {
             text-align: center;
+            border: 1px solid rgb(255, 255, 255);
             padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        #date {
+            font-weight: bold;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="https://th.bing.com/th/id/R.e21d3e044abc3ca37957186553988cab?rik=9Q7VygWb2KQXHw&pid=ImgRaw&r=0" style="width: 10vh; height: 10vh; float: topleft;">
-        <h1>Miłosz Proć FP</h1>
-        <p>Miłosz Proć</p>
-        <p> <span id="currentDate"></span></p>
-        <script>
-            const currentDateElement = document.getElementById("currentDate");
-            const currentDate = new Date();
-            currentDateElement.textContent = currentDate.toLocaleDateString();
-        </script>
-    </header>
+    Tabelka dla sora na 6
+<div class="container">
+    <table BORDER=15 CELLPADDING=15>
+        <tr>
+            <td rowspan="3" ><img src="https://i.iplsc.com/-/000G0EYFWMCWISI6-C461-F4.jpg" alt="Jesien on top"></td>
+           <td style="width: 200px;"><a href="http://zsdios.pl/">Najlepsze Techikum </a></td>
+            <td rowspan="3" ><img src="https://polska-org.pl/foto/7231/Zespol_Szkol_Drzewnych_i_Ochrony_Srodowiska_im_Jana_Zamoyskiego_ul_Browarna_Zwierzyniec_7231688.jpg" alt="zdjecie super szkoły"></td>
+        </tr>
+        <tr>
+            <td>Miłosz<br>Proć</td>
+        </tr>
 
-    <nav>
-        <a href="http://zsdios.pl/">Moja Szkoła</a>
-        <a href="https://www.realmadrid.com/">Mój ulubiony klub</a>
-        <a href="https://www.cristianoronaldo.com/#cr7">Najlepszy piłkarz</a>
-    </nav>
+        <tr>
+            <td id="date"></td>
+        </tr>
+    </table>
+    <footer><p>Super tabelka na 6 </p></footer>
+</div>
+<script type="text/javascript">
+    function updateDate() {
+        const dateElement = document.getElementById("date");
+        const currentDate = new Date();
+        dateElement.innerText = "Aktualna data i godzina: "  + currentDate.toLocaleString();
+    }
 
-    <section>
-        <h2>Moje ulubione kluby z danej ligi</h2>
-        <table>
-            <tr>
-                <th>Liga Hiszpańska</th>
-                
-                <th>Liga Angielska </th>
-            </tr>
-            <tr>
-                <td><a style="text-decoration: none;" href="//www.realmadrid.com/">Real Madryt</a></td>
-                
-                <td>Man UTD</td>
-            </tr>
-            <tr>
-              <td>Valencia</td>
-            
-              <td>Liverpool</td>
-          </tr>
-          <tr>
-              <td>Getafe</td>
-              
-              <td>Chealse</td>
-          </tr>
-        </table>
-    </section>
+    // Update the date immediately on page load
+    updateDate();
 
-    <footer>
-        <p>Miłosz Proć</p>
-        <p> Fanpage Miłosz Proć &copy;</p>
-     
-    </footer>
-
-  
+    // Update the date every 1000 milliseconds (1 second)
+    setInterval(updateDate, 1000);
+</script>
 </body>
 </html>
